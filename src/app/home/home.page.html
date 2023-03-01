@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <div class="header-center">
+    <ion-toolbar color="primary">
+      <ion-title>
+        <p><ion-icon name="calendar-outline"></ion-icon>  Simec Agenda</p>
+      </ion-title>
+    </ion-toolbar>
+  </div>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="flex-center">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title color="primary">Login</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-label position="floating">Usuário</ion-label>
+          <ion-input type="text" placeholder="Entre com o usuário" [(ngModel)]="user.usuario"></ion-input>
+        </ion-item>
+        &nbsp;
+        <ion-item>
+          <ion-label position="floating">Senha</ion-label>
+          <ion-input type="password" placeholder="Entre com a senha" [(ngModel)]="user.senha"></ion-input>
+        </ion-item>        
+        &nbsp;
+        <ion-item>
+          <ion-label class="resposta" color="danger">{{ resposta }}</ion-label>
+        </ion-item>        
+        <ion-button (click)="login()" expand="block">Logar</ion-button>
+      </ion-card-content>
+     
+    </ion-card>
+  </div>
+  
+</ion-content>

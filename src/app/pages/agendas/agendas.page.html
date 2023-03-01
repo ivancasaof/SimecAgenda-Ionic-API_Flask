@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <div class="header-center">
+    <ion-toolbar color="primary">
+      <ion-title>
+        <p><ion-icon name="calendar-outline"></ion-icon>  Simec Agenda</p>
+      </ion-title>
+    </ion-toolbar>
+  </div>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-button expand="full" color="dark" (click)="atualizar_lista()">Atualizar</ion-button>
+  <div class="container-cards">
+      <ion-card *ngFor="let agenda of lista_agenda">
+        &nbsp;
+      <ion-card-header>
+        <ion-card-title color="tertiary">Data: {{ agenda.data }}</ion-card-title>
+        <ion-card-subtitle><strong>Destino: {{ agenda.destino }}</strong></ion-card-subtitle>
+        <ion-card-subtitle>Hora de início: {{ agenda.hora_inicio }}</ion-card-subtitle>
+        <ion-card-subtitle><strong>Solicitante: {{ agenda.solicitante }}</strong></ion-card-subtitle>
+        <ion-card-subtitle><strong>Motivo: {{ agenda.motivo }}</strong></ion-card-subtitle>
+        <ion-card-subtitle><strong>Motorista: {{ agenda.motorista }}</strong></ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        Observações:<br>{{ agenda.obs }}
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

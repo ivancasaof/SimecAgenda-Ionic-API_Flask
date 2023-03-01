@@ -1,0 +1,7 @@
+{
+  "name": "SimecAgenda",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
